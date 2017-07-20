@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" metadata-complete="true" version="3.1">
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+  </welcome-file-list>
+  
+  
+  
+  <servlet>
+    <servlet-name>ToLogin</servlet-name>
+    <servlet-class>org.wlxy.student.web.ToLogin</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ToLogin</servlet-name>
+    <url-pattern>/tologin</url-pattern>
+  </servlet-mapping>
+  
+  
+  <servlet>
+    <servlet-name>Login</servlet-name>
+    <servlet-class>org.wlxy.student.web.LoginServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Login</servlet-name>
+    <url-pattern>/login</url-pattern>
+  </servlet-mapping>
+  
+  
+  
+  <filter>
+    <filter-name>SetCharacter</filter-name>
+    <filter-class>org.wlxy.student.util.Filter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>SetCharacter</filter-name>
+    <url-pattern>/*</url-pattern>
+  </filter-mapping>
+</web-app>
